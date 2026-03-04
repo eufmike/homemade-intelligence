@@ -1,0 +1,31 @@
+# =============================================================================
+# Ruff — Python linter & formatter configuration
+# https://docs.astral.sh/ruff/
+# =============================================================================
+
+target-version = "py311"
+line-length = 120
+
+[lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+    "RUF", # ruff-specific rules
+]
+ignore = [
+    "E501", # line too long — handled by formatter
+]
+
+[lint.isort]
+known-first-party = ["homemade_intelligence"]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true

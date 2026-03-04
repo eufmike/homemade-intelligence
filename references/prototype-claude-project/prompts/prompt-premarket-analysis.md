@@ -1,0 +1,1 @@
+Provide pre market analysis for stock market and futures by current collectible information source. 1. List references and reasons to include. 2. Examine if the reference collection is unbiased and diverse enough with economical emphasis. 3. Create reports, seek clear tone with action items.
