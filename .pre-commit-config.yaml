@@ -16,7 +16,7 @@ repos:
       - id: check-json
         exclude: '\.ipynb$'
       - id: check-added-large-files
-        args: ['--maxkb=500']
+        args: ["--maxkb=500"]
       - id: check-merge-conflict
       - id: detect-private-key
 
