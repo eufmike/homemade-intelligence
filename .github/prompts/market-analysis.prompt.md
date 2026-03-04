@@ -1,5 +1,6 @@
 ---
 mode: 'agent'
+model: "claude-sonnet-4.5"
 ---
 
 # Market and situational intelligence report — generation prompt
