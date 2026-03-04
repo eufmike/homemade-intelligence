@@ -22,7 +22,7 @@ jobs:
     name: Lint & Format
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Install Pixi
         uses: prefix-dev/setup-pixi@v0.8.1
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: lint
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Install Pixi
         uses: prefix-dev/setup-pixi@v0.8.1
@@ -63,7 +63,7 @@ jobs:
     name: AI Instructions Check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Verify AI instruction files exist
         run: |
