@@ -1,0 +1,25 @@
+# =============================================================================
+
+# CODEOWNERS — default reviewers for pull requests
+
+# <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners>
+
+# =============================================================================
+
+# Default owner for everything
+
+* @eufmike
+
+# Intelligence source architecture and analytical frameworks
+
+references/knowledgebase/ @eufmike
+
+# AI instruction files — changes need careful review
+
+.github/copilot-instructions.md @eufmike
+.claude/instructions.md @eufmike
+AGENTS.md @eufmike
+
+# CI and infrastructure
+
+.github/workflows/ @eufmike

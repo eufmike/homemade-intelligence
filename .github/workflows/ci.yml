@@ -5,54 +5,70 @@
 name: CI
 
 on:
-    push:
-        branches: [main]
-    pull_request:
-        branches: [main]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 permissions:
-    contents: read
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-    lint:
-        name: Lint & Format
-        runs-on: ubuntu-latest
+  lint:
+    name: Lint & Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-        steps:
-            - uses: actions/checkout@v4
+      - name: Install Pixi
+        uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          pixi-version: v0.41.4
 
-            - name: Install Pixi
-              uses: prefix-dev/setup-pixi@v0.8.1
-              with:
-                  pixi-version: v0.41.4
+      - name: Install dev environment
+        run: pixi install -e dev
 
-            - name: Install dev environment
-              run: pixi install -e dev
+      - name: Ruff lint
+        run: pixi run -e dev ruff check .
 
-            - name: Ruff lint
-              run: pixi run -e dev ruff check .
+      - name: Ruff format check
+        run: pixi run -e dev ruff format --check .
 
-            - name: Ruff format check
-              run: pixi run -e dev ruff format --check .
+      - name: Pre-commit hooks
+        run: pixi run -e dev pre-commit run --all-files
 
-            - name: Pre-commit hooks
-              run: pixi run -e dev pre-commit run --all-files
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
 
-    test:
-        name: Tests
-        runs-on: ubuntu-latest
-        needs: lint
+      - name: Install Pixi
+        uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          pixi-version: v0.41.4
 
-        steps:
-            - uses: actions/checkout@v4
+      - name: Install dev environment
+        run: pixi install -e dev
 
-            - name: Install Pixi
-              uses: prefix-dev/setup-pixi@v0.8.1
-              with:
-                  pixi-version: v0.41.4
+      - name: Run tests
+        run: pixi run -e dev pytest tests/ -v --tb=short
 
-            - name: Install dev environment
-              run: pixi install -e dev
+  ai-instructions:
+    name: AI Instructions Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-            - name: Run tests
-              run: pixi run -e dev pytest tests/ -v --tb=short || echo "No tests yet — skipping"
+      - name: Verify AI instruction files exist
+        run: |
+          echo "Checking AI instruction files..."
+          test -f .github/copilot-instructions.md || { echo "❌ Missing .github/copilot-instructions.md"; exit 1; }
+          test -f .claude/instructions.md          || { echo "❌ Missing .claude/instructions.md"; exit 1; }
+          test -f AGENTS.md                        || { echo "❌ Missing AGENTS.md"; exit 1; }
+          echo "✅ All AI instruction files present"

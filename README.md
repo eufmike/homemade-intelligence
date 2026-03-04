@@ -177,6 +177,7 @@ The project maintains a comprehensive **International Situation Intelligence Sta
 ```text
 homemade-intelligence/
 ├── README.md                          # This file — project goals and overview
+├── AGENTS.md                          # Shared AI agent instructions (Claude + Copilot)
 ├── LICENSE                            # MIT License
 ├── CHANGELOG.md                       # All notable changes (Keep a Changelog)
 ├── CONTRIBUTING.md                    # Contribution guide and dev setup
@@ -188,15 +189,22 @@ homemade-intelligence/
 ├── .gitignore                         # Git ignore rules
 ├── .pre-commit-config.yaml            # Pre-commit hook definitions
 ├── .python-version                    # Python version pin (pyenv compat)
+├── .claude/
+│   ├── instructions.md                # Claude Code AI instructions
+│   └── settings.json                  # Claude Code permissions
 ├── .github/
+│   ├── CODEOWNERS                     # Default PR reviewers
+│   ├── copilot-instructions.md        # GitHub Copilot AI instructions
 │   ├── SECURITY.md                    # Security reporting policy
 │   ├── PULL_REQUEST_TEMPLATE.md       # PR template
 │   ├── dependabot.yml                 # Automated dependency updates
 │   ├── workflows/
 │   │   └── ci.yml                     # GitHub Actions CI pipeline
 │   └── ISSUE_TEMPLATE/
-│       ├── bug_report.md
-│       └── feature_request.md
+│       ├── config.yml                 # Issue template chooser
+│       ├── bug_report.md              # Bug report template
+│       ├── feature_request.md         # Feature request template
+│       └── source_suggestion.md       # Intelligence source proposal template
 ├── .vscode/                           # VS Code workspace settings
 │   ├── settings.json
 │   └── extensions.json

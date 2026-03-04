@@ -1,0 +1,11 @@
+# =============================================================================
+# Issue template chooser configuration
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+# =============================================================================
+
+blank_issues_enabled: true
+
+contact_links:
+  - name: 📖 Intelligence Stack Reference
+    url: https://github.com/eufmike/homemade-intelligence/blob/main/references/knowledgebase/international-situation-intelligence-stack.md
+    about: Review the full source architecture before suggesting new sources.
