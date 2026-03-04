@@ -1,0 +1,1 @@
+Build a list of media and publications sources to analyze the international situation. The list should cover, politics, economics, financial, western news, non-english news, and crucial indexes used for early decisions.
