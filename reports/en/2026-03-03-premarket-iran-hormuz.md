@@ -54,7 +54,9 @@ reflecting a sustained war risk premium; the BDTI has surged approximately 40% f
 levels, confirming tanker operator risk aversion. Equity markets face a bifurcated risk: near-term
 pressure from energy cost pass-through; medium-term stabilisation if Iran signals restraint on
 Hormuz. The single highest-priority variable for today's session is any Iranian official statement
-on maritime traffic — monitor UKMTO advisories and Kpler vessel tracking in real time.
+on maritime traffic — monitor UKMTO advisories and MarineTraffic AIS data in real time.
+(Note: Kpler is an enterprise paywall platform; figures cited in this report are sourced via
+Reuters and Bloomberg secondary reporting. Free alternative: MarineTraffic — marinetraffic.com.)
 
 **Actionable takeaways by audience:**
 
@@ -76,7 +78,7 @@ on maritime traffic — monitor UKMTO advisories and Kpler vessel tracking in re
 | ------------------------ | ------------ |
 | Layer II — Western Anglophone news | Reuters, Associated Press (AP), Financial Times (FT), Bloomberg Politics |
 | Layer III — Economics & Policy | IMF World Economic Outlook (WEO) current data; Peterson Institute (PIIE) |
-| Layer IV — Energy & Commodities | EIA weekly petroleum status; Kpler tanker tracking; S&P Global Commodity Insights (Platts); UKMTO maritime advisories; Lloyd's war risk premium data |
+| Layer IV — Energy & Commodities | EIA weekly petroleum status; Kpler tanker tracking (enterprise; data cited via Reuters/Bloomberg); S&P Global Commodity Insights (Platts); UKMTO maritime advisories; Lloyd's war risk premium data; MarineTraffic AIS (free alternative to Kpler) |
 | Layer V — Financial Markets | Bloomberg Terminal data (VIX, MOVE, DXY, WTI/Brent futures, EMBI); CME Group (NYMEX futures curve); ICE (Brent, TTF, DXY) |
 | Layer VI — Non-Western Sources | Al Jazeera English; Nikkei Asia; IranWire; Iran International; Al-Monitor |
 | Layer VII — Early Warning Indexes | VIX, BDTI, MOVE, CDS spreads, PMI (Feb 2026 release), EMBI |
@@ -138,9 +140,11 @@ post-strike phase. Key developments as of 3 March 2026:
 
 - **Hormuz status: open but operationally degraded.** UKMTO advisory (2 March 2026) confirms
   commercial shipping is transiting but with significant war-risk insurance surcharges. Kpler
-  vessel tracking shows tanker frequency down approximately 18% from pre-strike baseline. The
-  practical effect is equivalent to a partial chokepoint restriction without a formal closure.
-  *(Source: UKMTO, Kpler — Layer IV. Confidence: High.)*
+  vessel tracking data (cited via Reuters and Bloomberg; Kpler is a paywalled enterprise platform —
+  free alternative: MarineTraffic AIS at marinetraffic.com) shows tanker frequency down
+  approximately 18% from pre-strike baseline. The practical effect is equivalent to a partial
+  chokepoint restriction without a formal closure.
+  *(Source: UKMTO, Kpler via Reuters/Bloomberg — Layer IV. Confidence: High.)*
 
 - **Trump signalled openness to Iran talks within 48 hours of strike commencement.** The Atlantic
   reported (1 March 2026) that Iran's "new leadership wants to speak with him." This is consistent
@@ -194,13 +198,13 @@ The BDTI has increased approximately 42% from its pre-strike baseline (Baltic Ex
 2026). This is a leading signal that tanker operators are repricing Hormuz transit risk in real
 time — distinct from and faster than official government statements about strait status.
 
-**Interpretation:** A BDTI spike of this magnitude, cross-referenced with Kpler's 18% decline in
-Hormuz tanker frequency, confirms that the market is pricing partial economic closure even in the
-absence of a formal Iranian blockade announcement. Lloyd's war-risk surcharges for Hormuz-transiting
+**Interpretation:** A BDTI spike of this magnitude, cross-referenced with the Reuters/Bloomberg-cited
+Kpler figure of an 18% decline in Hormuz tanker frequency, confirms that the market is pricing
+partial economic closure even in the absence of a formal Iranian blockade announcement. Lloyd's war-risk surcharges for Hormuz-transiting
 vessels have increased to approximately 0.75% of hull value per voyage (from a pre-crisis baseline
 of ~0.05%), functioning as a de-facto deterrent.
 
-> Source: Baltic Exchange, Kpler, Lloyd's — Layer IV and VII. Confidence: High.
+> Source: Baltic Exchange, Kpler (via Reuters/Bloomberg), Lloyd's — Layer IV and VII. Confidence: High.
 
 ### Agricultural commodity cascade
 
@@ -271,7 +275,7 @@ Confidence: High for market data; Medium for interpretive framing.)*
 
 | Risk | Likelihood | Impact | Rating | Confidence | Primary source |
 | ---- | ---------- | ------ | ------ | ---------- | -------------- |
-| Iranian Hormuz blockade (formal or de-facto) | Medium | High | 🟠 Elevated | Medium | Kpler, UKMTO, EIA |
+| Iranian Hormuz blockade (formal or de-facto) | Medium | High | 🟠 Elevated | Medium | UKMTO, EIA, Kpler via Reuters/Bloomberg |
 | WTI spike above $120/bbl (demand destruction threshold) | Medium | High | 🟠 Elevated | Medium | CME NYMEX futures curve |
 | EM sovereign stress cascade (Turkey, Egypt, Pakistan) | Medium | Medium | 🟡 Moderate | Medium | EMBI, Bloomberg CDS data |
 | US equity correction >10% from pre-strike level | Low-Medium | High | 🟠 Elevated | Low | VIX, S&P 500 futures |
@@ -299,9 +303,11 @@ Confidence: High for market data; Medium for interpretive framing.)*
 - **Macro/multi-asset:** Watch for a Trump Truth Social post mentioning Iran talks or
   "deal" within the next 72 hours; if confirmed, close energy-sector hedges partially and
   re-enter EM positions selectively.
-- **Intelligence monitoring:** Activate full Layer IV energy monitoring cadence (EIA, Kpler,
-  Vortexa, UKMTO, Lloyd's) until Hormuz returns to pre-crisis baseline; do not reduce monitoring
-  cadence based on diplomatic statements alone.
+- **Intelligence monitoring:** Activate full Layer IV energy monitoring cadence (EIA, MarineTraffic
+  AIS, Vortexa where accessible, UKMTO, Lloyd's) until Hormuz returns to pre-crisis baseline; do not
+  reduce monitoring cadence based on diplomatic statements alone. Note: Kpler and Vortexa are
+  enterprise platforms; use MarineTraffic (<https://www.marinetraffic.com>) as the free AIS
+  substitute for real-time vessel position verification.
 
 ---
 
@@ -317,7 +323,7 @@ reconstitute. *This counter-narrative, if correct, would invalidate the de-escal
 thesis and is the primary tail risk for this report.*
 
 **On Hormuz:**
-The operational consensus (Kpler, UKMTO) is that Hormuz remains open with elevated risk premiums.
+The operational consensus (UKMTO, Kpler data via Reuters/Bloomberg) is that Hormuz remains open with elevated risk premiums.
 Al Jazeera's MENA correspondents report that Gulf state officials privately assess Iran's Hormuz
 closure capability as "significantly degraded" by the strike targeting IRGC naval command
 infrastructure — suggesting current BDTI elevation may be over-pricing closure risk.
@@ -343,17 +349,17 @@ blindspot — addressed via full Layer IV activation.)*
 | ------ | ------ | ----- |
 | Narrative velocity | 🟡 Elevated | Multiple unverified casualty figures circulating; cross-reference only with CENTCOM statements and AP wire |
 | Account age + posting frequency | 🟡 Monitor | DFRLab flagged a network of newly created accounts amplifying Iranian retaliation rumours on X/Twitter; treat as narrative pressure, not intelligence |
-| Cross-platform simultaneity | 🟡 Active | "Hormuz closed" claim appeared simultaneously across X, Telegram, and fringe sites on 1 March; Kpler vessel data did not support it — confirmed false |
+| Cross-platform simultaneity | 🟡 Active | "Hormuz closed" claim appeared simultaneously across X, Telegram, and fringe sites on 1 March; Kpler vessel data (via Reuters) did not support it — confirmed false |
 | Emotional valence | 🟡 High | High-outrage content dominating X trending; standard wartime CIB pattern |
-| Source laundering chain | 🟡 Detected | One "Hormuz closure" claim traced from Telegram channel → fringe aggregator → picked up by one mainstream outlet before being corrected; verify all maritime claims against Kpler and UKMTO only |
+| Source laundering chain | 🟡 Detected | One "Hormuz closure" claim traced from Telegram channel → fringe aggregator → picked up by one mainstream outlet before being corrected; verify all maritime claims against UKMTO and MarineTraffic AIS only |
 | Synthetic image artifacts | 🟢 Not detected | No confirmed deepfakes in primary analysis channels as of this writing |
 | LLM-style prose | 🟢 Not detected | — |
 | Missing bylines | 🟡 Active | Multiple anonymous Telegram channels claiming IRGC retaliation orders; treat as unverifiable |
 | Geopolitical timing | 🔴 High risk | All claims of Iranian retaliation decisions are emerging at maximum strategic ambiguity; apply maximum source scepticism |
 
 **Summary:** Active CIB environment. Apply the source laundering check to every maritime and
-retaliation claim before acting. Primary verified sources for Hormuz status: Kpler, Vortexa,
-UKMTO only.
+retaliation claim before acting. Primary verified sources for Hormuz status: UKMTO, MarineTraffic
+AIS (free), and Vortexa/Kpler data as cited by Reuters, Bloomberg, or Lloyd's List.
 
 > Source: DFRLab, Stanford Internet Observatory — Layer IX. Confidence: Medium.
 
@@ -377,7 +383,8 @@ UKMTO only.
 | 12 | Legislative and insider briefing | Politico Playbook | Layer VIII | politico.com |
 | 13 | War Powers Resolution analysis | Lawfare | Layer VIII | lawfaremedia.org |
 | 14 | Oil and gas statistics | EIA (Energy Information Administration) | Layer IV | eia.gov |
-| 15 | Real-time tanker tracking | Kpler | Layer IV | kpler.com |
+| 15 | Real-time tanker tracking (enterprise paywall; data cited via Reuters/Bloomberg) | Kpler | Layer IV | kpler.com |
+| 15a | Free AIS vessel tracking — accessible substitute for Kpler | MarineTraffic | Layer IV (unlisted in Stack; publicly accessible) | marinetraffic.com |
 | 16 | Maritime safety advisory | UKMTO | Layer IV | ukmto.org |
 | 17 | War risk premiums | Lloyd's of London | Layer IV | lloyds.com |
 | 18 | Commodity pricing benchmarks | S&P Global Platts | Layer IV | spglobal.com/commodityinsights |

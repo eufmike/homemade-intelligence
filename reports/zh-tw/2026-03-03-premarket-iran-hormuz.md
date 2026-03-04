@@ -109,9 +109,11 @@ intelligence_stack_version: "2.0"
   *(來源：路透社、半島電視台 — 第二層與第六層。信心等級：中。官方聲明歷來誇大後未能兌現。)*
 
 - **荷姆茲海峽：開放但運作受損。** UKMTO 公告（2026 年 3 月 2 日）確認商業航運仍在通行，
-  但戰爭風險保險費用大幅攀升。Kpler 油輪追蹤顯示，油輪過境頻率較空襲前基準下降約 18%。
-  實際效果等同於部分咽喉要道限制，即便未有正式關閉宣告。
-  *(來源：UKMTO、Kpler — 第四層。信心等級：高。)*
+  但戰爭風險保險費用大幅攀升。路透社與彭博引用 Kpler 油輪追蹤數據，顯示油輪過境頻率較
+  空襲前基準下降約 18%。實際效果等同於部分咽喉要道限制，即便未有正式關閉宣告。
+  *(來源：UKMTO（ukmto.org，免費公開）；Kpler 數據經路透社、彭博二次引用（企業付費平台，
+  非直接存取）；免費替代查詢：MarineTraffic（marinetraffic.com）AIS 即時船隻追蹤 — 第四層。
+  信心等級：高。)*
 
 - **川普在空襲開始後 48 小時內發出願意與伊朗對話的訊號。** 《大西洋月刊》（The Atlantic）
   報導（2026 年 3 月 1 日），伊朗「新領導層希望與他對話」。此與情報架構第八層「股市下跌
@@ -391,8 +393,9 @@ EIA 與 IEA 亦未發出協調釋放戰略儲備的緊急聲明。
 | 12 | 立法與內部簡報 | Politico Playbook | 第八層 | politico.com |
 | 13 | 《戰爭授權決議》分析 | Lawfare | 第八層 | lawfaremedia.org |
 | 14 | 石油與天然氣統計 | EIA（美國能源資訊署） | 第四層 | eia.gov |
-| 15 | 即時油輪追蹤 | Kpler | 第四層 | kpler.com |
-| 16 | 海事安全公告 | UKMTO | 第四層 | ukmto.org |
+| 15 | 即時油輪追蹤（企業付費平台；本報告數據經路透社、彭博二次引用） | Kpler | 第四層 | kpler.com |
+| 15a | 免費 AIS 船隻追蹤替代方案 | MarineTraffic | 第四層（未列架構，可公開存取） | marinetraffic.com |
+| 16 | 海事安全公告（免費公開） | UKMTO | 第四層 | ukmto.org |
 | 17 | 戰爭風險溢價 | 勞合社（Lloyd's of London） | 第四層 | lloyds.com |
 | 18 | 大宗商品定價基準 | S&P Global Platts | 第四層 | spglobal.com/commodityinsights |
 | 19 | 農業化肥連鎖分析 | Pro Farmer | 第四層 | profarmer.com |
