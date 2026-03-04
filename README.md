@@ -28,7 +28,7 @@ This is not a news aggregator. It is a structured analytical system designed to:
 - **Triangulate** across ideologically and geographically distinct sources
 - **Detect bias** rather than pretend it doesn't exist
 - **Generate reports** in formats appropriate for different audiences and literacy levels
-- **Bridge the information gap** between English-language and Mandarin-language geopolitical discourse
+- **Bridge the information gap** between English-language and Mandarin-language or any other language geopolitical discourse
 
 ---
 
@@ -53,6 +53,8 @@ Build a structured analytical system for **political analysis and investment ana
 - Provides **financial market early warning signals** alongside geopolitical analysis
 - Monitors **energy markets, commodity flows, and chokepoint intelligence** as primary geopolitical-economic transmission mechanisms
 - Implements the **Compound Vulnerability Framework** for anticipatory analysis
+- Builds **politician profiling** — systematic behavioral analysis of key political figures (decision patterns, grievance cycles, donor/ally relationships, stated vs. revealed preferences) to enable predictive modeling of policy actions and leadership decisions
+- **Captures rare events** (black swans, geopolitical shocks, market dislocations) and provides structured **political and economic explanations** — including root-cause analysis, compound trigger identification, precedent comparison, and cascading-impact assessment across affected domains
 
 ### Goal 2 — Broadened Geographic Scope: US + East Asia
 
@@ -135,35 +137,36 @@ Generate intelligence reports tailored to **three distinct audience profiles**:
 
 ### Intelligence Source Architecture
 
-The project maintains a comprehensive **International Situation Intelligence Stack** (v2.0, March 2026) covering:
+The project maintains a comprehensive **International Situation Intelligence Stack** (v2.0, March 2026) — a professionally structured source architecture covering 10 analytical layers. Version 2.0 was updated following the analytical stress-test performed during the February 28, 2026 US-Israel joint strike on Iran (Operation Epic Fury), which exposed critical gaps in energy intelligence, Persian-language sources, and compound vulnerability analysis.
 
-- 🌍 Geopolitics & strategic affairs (think tanks, journals, research institutions)
-- 📰 Political news — Western Anglophone (wire services, newspapers, broadcast)
-- 📊 Economics & policy (IMF, World Bank, BIS, OECD, specialist think tanks)
-- ⛽ Energy, commodities & chokepoint intelligence (EIA, IEA, OPEC+, vessel tracking)
-- 💹 Financial markets & intelligence (Bloomberg, CME, ICE, risk indexes)
-- 🌏 Non-English & non-Western sources (Al Jazeera, SCMP, Nikkei, IranWire, and more)
-- 📈 Early warning indexes & quantitative dashboards (VIX, MOVE, FSI, ACLED, PMI)
-- 🇺🇸 Trump behavior prediction stack (behavioral heuristics, media feedback loop tracking)
-- 🤖 Social media trend monitoring & AI manipulation analysis (CIB detection, deepfake tools)
-- 🔄 Integrated monitoring workflow (temporal layer structure, priority matrix, failure mode reference)
+#### Source Layers
 
-> See [`references/knowledgebase/international-situation-intelligence-stack.md`](references/knowledgebase/international-situation-intelligence-stack.md) for the full source architecture.
+| # | Layer | Key Sources | Analytical Role |
+|---|-------|-------------|-----------------|
+| I | 🌍 **Geopolitics & Strategic Affairs** | Foreign Affairs, Foreign Policy, The Economist, Chatham House, RAND, Carnegie Endowment, IISS, CFR, Stimson Center, Arms Control Association (ACA) | Structural forces shaping international order — power competition, alliances, conflicts, state behavior; operates on longer analytical cycles (weeks to months) |
+| II | 📰 **Political News — Western Anglophone** | Reuters, AP, FT, NYT, The Guardian, Politico, Bloomberg, WSJ, NPR, PBS NewsHour, CBS News | Primary record sources — *what happened*; bias tracked as analytical variable across ideological spectrum (left, center, right, public media) |
+| III | 📊 **Economics & Policy** | IMF, World Bank, OECD, BIS, Project Syndicate, Bruegel, Peterson Institute (PIIE), VoxEU, Atlantic Council GeoEconomics Center | Macroeconomic trends, trade flows, fiscal/monetary policy; institutional sources as baseline, think tanks for interpretation |
+| IV | ⛽ **Energy, Commodities & Chokepoint Intelligence** *(NEW v2.0)* | EIA, IEA, OPEC+, Kpler, Vortexa, S&P Global Platts, Lloyd's/UKMTO, Pro Farmer, FAO, CME Group | Energy markets as primary geopolitical-economic transmission mechanism; chokepoint monitoring (Hormuz, Suez, Bab-el-Mandeb, Malacca, Turkish Straits); agricultural commodity exposure |
+| V | 💹 **Financial Markets & Intelligence** | Bloomberg Terminal, Reuters Eikon, FT Alphaville, WSJ Markets, Barron's, CME/NYMEX, ICE, ZeroHedge | Markets as distributed real-time prediction machines; leading vs. lagging indicator framework; commodity derivatives for energy crisis monitoring |
+| VI | 🌏 **Non-English & Non-Western Sources** | Al Jazeera, SCMP, Nikkei Asia, Der Spiegel, Le Monde Diplomatique, El País, The Hindu, Haaretz, Kyiv Independent, The Moscow Times, IranWire, Radio Farda, Iran International, Israel Hayom, Al-Monitor, Middle East Eye | Avoids Anglophone epistemic capture; Persian-language/Iranian civil society sources added in v2.0 |
+| VII | 📈 **Early Warning Indexes & Quantitative Dashboards** | VIX, MOVE, DXY, EMBI, CDS, WTI/Brent futures, LNG spot, Yield Curve, BDI, BDTI, Lloyd's war risk premium, FSI, Freedom House, CPI, GPI, PMI, ACLED, WUI | Leading indicators for anticipatory analysis; includes **Compound Vulnerability Framework** for identifying optimal-window geopolitical escalation scenarios |
+| VIII | 🇺🇸 **Trump Behavior Prediction Stack** | Truth Social, Axios, Politico Playbook, The Hill, Semafor; Fox News, Breitbart, National Review; ProPublica, The Atlantic, Lawfare; Metaculus, Polymarket | Behavioral heuristics (media grievance cycles, market crash → policy reversal, ally lobby → action, negotiation as cover); prediction markets for probabilistic forecasting |
+| IX | 🤖 **Social Media Trend Monitoring & AI Manipulation Analysis** | Google Trends, Brandwatch, CrowdTangle, Bluesky; Stanford Internet Observatory, DFRLab, Graphika, Bellingcat, NewsGuard; Hive Moderation, Sensity AI, GPTZero | CIB detection, synthetic media detection, narrative laundering identification; real-time manipulation detection framework |
+| X | 🔄 **Integrated Monitoring Workflow** | Temporal layer structure (real-time → daily → weekly → monthly → quarterly), Source Priority Matrix, Analytical Failure Mode Reference | Structured consumption cadence to prevent information overload; failure mode checklist including negotiation optimism bias and energy market blindspot |
+
+#### Key Analytical Frameworks (v2.0)
+
+- **Compound Vulnerability Framework** — Scores target states across military, economic, and political dimensions to identify windows of maximum exposure (validated by Iran strike timing analysis)
+- **Behavioral Heuristics for Trump Decision Prediction** — 7 empirically observed patterns including *market crash → policy reversal* (primary constraint) and *negotiation as cover for military planning* (new in v2.0)
+- **Real-Time Manipulation Detection Framework** — 9-signal checklist for identifying coordinated or AI-generated manipulation before acting on information
+- **Chokepoint Monitoring Quick-Reference** — 5 critical maritime chokepoints with commodity flows, risk actors, and real-time monitoring sources
+- **Analytical Failure Mode Reference** — 7 documented failure modes (Anglophone epistemic capture, negotiation optimism bias, nuclear pretext conflation, monocausal attribution, recency bias, confirmation bias, energy market blindspot)
+
+> See [`references/knowledgebase/international-situation-intelligence-stack.md`](references/knowledgebase/international-situation-intelligence-stack.md) for the full source architecture with detailed descriptions, URLs, and analytical notes.
 
 ---
 
 ## Roadmap Overview
-
-Development is organized into phases:
-
-| Phase | Focus | Status |
-|-------|-------|--------|
-| **Phase 0** | Foundation — README, source architecture, project structure | 🟡 In Progress |
-| **Phase 1** | Data ingestion — automated source monitoring and collection | ⬜ Planned |
-| **Phase 2** | Analysis engine — triangulation, bias detection, early warning | ⬜ Planned |
-| **Phase 3** | Report generation — multi-audience, multi-language output | ⬜ Planned |
-| **Phase 4** | Taiwan-specific modules — strait safety, CIB detection for LINE/Facebook | ⬜ Planned |
-| **Phase 5** | Elder-accessible interface — simplified UI, audio output, LINE integration | ⬜ Planned |
 
 > Detailed roadmap will be maintained in [`references/roadmap/roadmap.md`](references/roadmap/roadmap.md).
 
