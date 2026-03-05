@@ -77,3 +77,12 @@ logs/
 tmp/
 temp/
 *.tmp
+
+# ----- Runtime data (generated) -----
+data/
+!data/.gitkeep
+
+# ----- Node.js (frontend) -----
+frontend/node_modules/
+frontend/.next/
+frontend/out/

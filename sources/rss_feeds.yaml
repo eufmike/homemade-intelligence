@@ -1,0 +1,242 @@
+# =============================================================================
+# Homemade Intelligence — Source Registry
+# =============================================================================
+# Fields:
+#   name:       Display name
+#   url:        RSS/Atom feed URL
+#   type:       rss / gdelt / manual / api
+#   layer:      Intelligence stack layer 1-10
+#   bias_label: center / left / right / state-affiliated / independent
+#   language:   ISO 639-1 code
+#   is_active:  true / false
+# =============================================================================
+
+feeds:
+  # ---------------------------------------------------------------------------
+  # Layer I — Geopolitics & Strategic Affairs (think tanks, journals)
+  # ---------------------------------------------------------------------------
+  - name: "Foreign Affairs"
+    url: "https://www.foreignaffairs.com/rss.xml"
+    type: rss
+    layer: 1
+    bias_label: center
+    language: en
+    is_active: true
+
+  - name: "War on the Rocks"
+    url: "https://warontherocks.com/feed/"
+    type: rss
+    layer: 1
+    bias_label: center
+    language: en
+    is_active: true
+
+  - name: "Lawfare"
+    url: "https://www.lawfaremedia.org/feed"
+    type: rss
+    layer: 1
+    bias_label: left
+    language: en
+    is_active: true
+
+  - name: "ISW (Institute for the Study of War)"
+    url: "https://www.understandingwar.org/rss.xml"
+    type: rss
+    layer: 1
+    bias_label: center
+    language: en
+    is_active: true
+
+  # ---------------------------------------------------------------------------
+  # Layer II — Political News (wire services + broadsheets)
+  # ---------------------------------------------------------------------------
+  - name: "Reuters World"
+    url: "https://feeds.reuters.com/Reuters/worldNews"
+    type: rss
+    layer: 2
+    bias_label: center
+    language: en
+    is_active: true
+
+  - name: "BBC World"
+    url: "https://feeds.bbci.co.uk/news/world/rss.xml"
+    type: rss
+    layer: 2
+    bias_label: center
+    language: en
+    is_active: true
+
+  - name: "Al Jazeera English"
+    url: "https://www.aljazeera.com/xml/rss/all.xml"
+    type: rss
+    layer: 2
+    bias_label: independent
+    language: en
+    is_active: true
+
+  - name: "The Guardian World"
+    url: "https://www.theguardian.com/world/rss"
+    type: rss
+    layer: 2
+    bias_label: left
+    language: en
+    is_active: true
+
+  - name: "Financial Times"
+    url: "https://www.ft.com/rss/home/us"
+    type: rss
+    layer: 2
+    bias_label: center
+    language: en
+    is_active: true
+
+  - name: "South China Morning Post"
+    url: "https://www.scmp.com/rss/91/feed"
+    type: rss
+    layer: 2
+    bias_label: center
+    language: en
+    is_active: true
+
+  - name: "Nikkei Asia"
+    url: "https://asia.nikkei.com/rss/feed/nar"
+    type: rss
+    layer: 2
+    bias_label: center
+    language: en
+    is_active: true
+
+  # ---------------------------------------------------------------------------
+  # Layer III — Economics & Policy
+  # ---------------------------------------------------------------------------
+  - name: "IMF Blog"
+    url: "https://www.imf.org/en/Blogs/rss"
+    type: rss
+    layer: 3
+    bias_label: center
+    language: en
+    is_active: true
+
+  - name: "Peterson Institute (PIIE)"
+    url: "https://www.piie.com/rss/realtime-economic-issues-watch"
+    type: rss
+    layer: 3
+    bias_label: center
+    language: en
+    is_active: true
+
+  - name: "Brookings Institution"
+    url: "https://www.brookings.edu/feed/"
+    type: rss
+    layer: 3
+    bias_label: left
+    language: en
+    is_active: true
+
+  # ---------------------------------------------------------------------------
+  # Layer IV — Energy, Commodities & Chokepoints
+  # ---------------------------------------------------------------------------
+  - name: "EIA (Energy Information Administration)"
+    url: "https://www.eia.gov/rss/todayinenergy.xml"
+    type: rss
+    layer: 4
+    bias_label: center
+    language: en
+    is_active: true
+
+  - name: "Oil Price.com"
+    url: "https://oilprice.com/rss/main"
+    type: rss
+    layer: 4
+    bias_label: center
+    language: en
+    is_active: true
+
+  # ---------------------------------------------------------------------------
+  # Layer V — Non-Western & Regional Perspectives
+  # ---------------------------------------------------------------------------
+  - name: "Global Times (China, state-affiliated)"
+    url: "https://www.globaltimes.cn/rss/outbrain.xml"
+    type: rss
+    layer: 5
+    bias_label: state-affiliated
+    language: en
+    is_active: true
+
+  - name: "TASS English (Russia, state-affiliated)"
+    url: "https://tass.com/rss/v2.xml"
+    type: rss
+    layer: 5
+    bias_label: state-affiliated
+    language: en
+    is_active: true
+
+  - name: "Al-Monitor Middle East"
+    url: "https://www.al-monitor.com/rss"
+    type: rss
+    layer: 5
+    bias_label: independent
+    language: en
+    is_active: true
+
+  - name: "The Hindu (India)"
+    url: "https://www.thehindu.com/feeder/default.rss"
+    type: rss
+    layer: 5
+    bias_label: center
+    language: en
+    is_active: true
+
+  - name: "Deutsche Welle (Germany)"
+    url: "https://rss.dw.com/rdf/rss-en-world"
+    type: rss
+    layer: 5
+    bias_label: center
+    language: en
+    is_active: true
+
+  - name: "Radio Free Asia (Taiwan/China)"
+    url: "https://www.rfa.org/english/rss2.xml"
+    type: rss
+    layer: 5
+    bias_label: independent
+    language: en
+    is_active: true
+
+  # ---------------------------------------------------------------------------
+  # Layer VI — Financial Markets
+  # ---------------------------------------------------------------------------
+  - name: "Bloomberg Markets (via Yahoo Finance proxy)"
+    url: "https://finance.yahoo.com/news/rssindex"
+    type: rss
+    layer: 6
+    bias_label: center
+    language: en
+    is_active: true
+
+  # ---------------------------------------------------------------------------
+  # Layer VII — Taiwan-Specific Sources
+  # ---------------------------------------------------------------------------
+  - name: "Taipei Times"
+    url: "https://www.taipeitimes.com/xml/index.rss"
+    type: rss
+    layer: 7
+    bias_label: independent
+    language: en
+    is_active: true
+
+  - name: "Taiwan News"
+    url: "https://www.taiwannews.com.tw/rss/index.rss"
+    type: rss
+    layer: 7
+    bias_label: independent
+    language: en
+    is_active: true
+
+  - name: "Focus Taiwan (CNA English)"
+    url: "https://focustaiwan.tw/rss/aall.xml"
+    type: rss
+    layer: 7
+    bias_label: center
+    language: en
+    is_active: true

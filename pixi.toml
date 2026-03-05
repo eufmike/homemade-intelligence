@@ -4,25 +4,43 @@ version = "0.1.0"
 description = "A personal, bias-aware intelligence platform for geopolitical analysis and investment decision-making"
 authors = ["Mike Shih"]
 channels = ["conda-forge"]
-platforms = ["osx-arm64", "osx-64", "linux-64"]
+platforms = ["osx-arm64", "linux-64"]
 
 [tasks]
-# placeholder tasks — expand as tooling is built
-# analyze = "python tools/analyze.py"
-# report  = "python tools/generate_report.py"
 lint = "ruff check ."
 format = "ruff format ."
 test = "pytest tests/ -v"
+serve = "uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000"
+db-init = "python -c \"from backend.database.connection import create_all_tables; create_all_tables(); print('Database tables created.')\""
 
 [dependencies]
-python = ">=3.11"
+python = ">=3.11,<3.14"
 
 [pypi-dependencies]
+fastapi = ">=0.115"
+uvicorn = {version = ">=0.32", extras = ["standard"]}
+pydantic = ">=2.9"
+pydantic-settings = ">=2.6"
+sqlalchemy = ">=2.0"
+anthropic = ">=0.40"
+chromadb = ">=1.0.0"
+feedparser = ">=6.0"
+httpx = ">=0.28"
+yfinance = ">=0.2"
+fredapi = ">=0.5"
+apscheduler = ">=3.10"
+python-dotenv = ">=1.0"
+sentence-transformers = ">=3.0"
+trafilatura = ">=1.12"
+pyyaml = ">=6.0"
 
 [feature.dev.dependencies]
 ruff = "*"
 pre-commit = "*"
 pytest = "*"
+pytest-asyncio = "*"
+respx = "*"
+httpx = "*"
 
 [environments]
 default = { solve-group = "default" }
