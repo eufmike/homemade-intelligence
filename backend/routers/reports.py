@@ -2,13 +2,14 @@
 
 import asyncio
 import logging
+from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 
-from backend.agent.pipeline import run_pipeline_stream
-from backend.database.connection import get_db
+from backend.agent.pipeline import get_event_queue, launch_pipeline, stream_queue
+from backend.database.connection import SessionLocal, get_db
 from backend.database.models import Report
 from backend.schemas.report import GenerateReportRequest, ReportDetail, ReportSummary
 
@@ -23,22 +24,45 @@ async def generate_report(
 ):
     """Start report generation and stream SSE output.
 
-    Returns a Server-Sent Events stream. Events:
+    Creates the report record, launches the pipeline as an independent
+    background task (survives client disconnect), and streams events
+    from the task's queue until completion.
+
+    Events:
     - status: pipeline stage updates
     - token: streaming analysis text
     - warning: coverage or reuse warnings
     - complete: final stats
     - error: pipeline failure
     """
+    # Create the report record upfront so we can return its ID in the first event
+    report = Report(
+        topic=request.topic,
+        domain=request.domain,
+        status="generating",
+        created_at=datetime.now(timezone.utc),
+    )
+    db.add(report)
+    db.commit()
+    db.refresh(report)
+    report_id = report.id
+
+    # Launch pipeline as independent background task
+    await launch_pipeline(
+        report_id=report_id,
+        topic=request.topic,
+        domain=request.domain,
+        manual_text=request.manual_text,
+        manual_title=request.manual_title,
+    )
+
+    queue = get_event_queue(report_id)
 
     async def event_generator():
-        async for chunk in run_pipeline_stream(
-            topic=request.topic,
-            domain=request.domain,
-            db=db,
-            manual_text=request.manual_text,
-            manual_title=request.manual_title,
-        ):
+        if queue is None:
+            yield "event: error\ndata: {\"message\": \"Pipeline failed to start\"}\n\n"
+            return
+        async for chunk in stream_queue(report_id, queue):
             yield chunk
 
     return StreamingResponse(
@@ -65,8 +89,7 @@ def list_reports(
         q = q.filter(Report.domain == domain)
     if status:
         q = q.filter(Report.status == status)
-    reports = q.order_by(Report.created_at.desc()).offset(offset).limit(limit).all()
-    return reports
+    return q.order_by(Report.created_at.desc()).offset(offset).limit(limit).all()
 
 
 @router.get("/{report_id}", response_model=ReportDetail)
@@ -80,19 +103,31 @@ def get_report(report_id: int, db: Session = Depends(get_db)):
 
 @router.get("/{report_id}/stream")
 async def stream_report(report_id: int, db: Session = Depends(get_db)):
-    """SSE endpoint for an in-progress report (polls status until complete)."""
+    """SSE for an in-progress report: forwards from queue if running, else polls DB."""
     report = db.query(Report).filter(Report.id == report_id).first()
     if not report:
         raise HTTPException(status_code=404, detail=f"Report {report_id} not found")
 
-    async def poll_generator():
+    queue = get_event_queue(report_id)
+
+    async def generator():
         import json
 
-        for _ in range(120):  # max 10 minutes at 5s intervals
-            db.refresh(report)
-            yield f"event: status\ndata: {json.dumps({'status': report.status, 'report_id': report_id})}\n\n"
-            if report.status in ("complete", "failed"):
-                break
-            await asyncio.sleep(5)
+        # If pipeline is still running, forward from its queue
+        if queue is not None:
+            async for chunk in stream_queue(report_id, queue):
+                yield chunk
+            return
 
-    return StreamingResponse(poll_generator(), media_type="text/event-stream")
+        # Otherwise poll DB for status
+        with SessionLocal() as poll_db:
+            rep = poll_db.get(Report, report_id)
+            for _ in range(120):
+                if rep:
+                    poll_db.refresh(rep)
+                    yield f"event: status\ndata: {json.dumps({'status': rep.status, 'report_id': report_id})}\n\n"
+                    if rep.status in ("complete", "failed"):
+                        break
+                await asyncio.sleep(5)
+
+    return StreamingResponse(generator(), media_type="text/event-stream")
