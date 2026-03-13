@@ -1,6 +1,6 @@
 ---
 mode: 'agent'
-model: "claude-sonnet-4.5"
+model: "claude-sonnet-4-6"
 ---
 
 # Market and situational intelligence report — generation prompt
@@ -22,11 +22,11 @@ Before writing the report, read and internalise the following files:
   source architecture (Intelligence Stack v2.0). Use it to select, evaluate, and label every source
   you cite. Never cite a source absent from this stack without explicitly flagging it as unlisted
   and assessing its reliability tier.
-- `references/claude-project/2026-iran-war-analysis/project-instruction.md` — report quality rules
-  (sourcing discipline, financial-economic framing, risk assessment, abbreviation discipline).
-- `references/claude-project/2026-iran-war-analysis/prompts/premarket-analysis.md` — baseline
-  pre-market analysis methodology (reference collection, bias audit, action items).
-- `AGENTS.md` — audience rules, analytical principles, output standards, and hard constraints.
+- `AGENTS.md` — project index; points to all instruction files.
+- `.github/instructions/domain.instructions.md` — analytical principles, source architecture,
+  multi-audience rules, Taiwan Strait safety, and analysis output standards.
+- `.github/instructions/market-report.instructions.md` — pre-market report structure, core
+  principles, section order, style rules, and quality checklist.
 
 ---
 

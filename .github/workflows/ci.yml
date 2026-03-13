@@ -68,7 +68,10 @@ jobs:
       - name: Verify AI instruction files exist
         run: |
           echo "Checking AI instruction files..."
-          test -f .github/copilot-instructions.md || { echo "❌ Missing .github/copilot-instructions.md"; exit 1; }
-          test -f .claude/instructions.md          || { echo "❌ Missing .claude/instructions.md"; exit 1; }
-          test -f AGENTS.md                        || { echo "❌ Missing AGENTS.md"; exit 1; }
+          test -f AGENTS.md                                                  || { echo "❌ Missing AGENTS.md"; exit 1; }
+          test -f .github/instructions/project.instructions.md               || { echo "❌ Missing project.instructions.md"; exit 1; }
+          test -f .github/instructions/coding.instructions.md                || { echo "❌ Missing coding.instructions.md"; exit 1; }
+          test -f .github/instructions/domain.instructions.md                || { echo "❌ Missing domain.instructions.md"; exit 1; }
+          test -f .github/instructions/markdown.instructions.md              || { echo "❌ Missing markdown.instructions.md"; exit 1; }
+          test -f .github/instructions/market-report.instructions.md         || { echo "❌ Missing market-report.instructions.md"; exit 1; }
           echo "✅ All AI instruction files present"

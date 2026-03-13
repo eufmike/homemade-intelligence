@@ -1,3 +1,7 @@
+---
+applyTo: "reports/**,.github/prompts/**"
+---
+
 # Market report instruction
 
 Instructions for generating pre-market and daily market analysis reports.
